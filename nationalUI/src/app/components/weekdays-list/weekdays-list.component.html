@@ -1,0 +1,22 @@
+<div class="card my-5">
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Week Day</th>
+        <th scope="col">Week Day Time</th>
+        <th scope="col">Url passed</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let weekday of weekdays">
+        <td>{{ weekday.id }}</td>
+        <td>{{ weekday.dayOfWeek }}</td>
+        <td>{{ weekday.time }}</td>
+        <td>{{ weekday.urlParam }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

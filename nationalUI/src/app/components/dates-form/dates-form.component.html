@@ -1,0 +1,61 @@
+<div class="card my-5">
+  <div class="card-body">
+    <form (ngSubmit)="onSubmit()" #datesForm="ngForm">
+      <div class="form-group">
+        <label for="date1">Add Dates</label>
+        <input type="date" [(ngModel)]="dates.dates[0]"
+               class="form-control"
+               id="date1"
+               name="date1"
+               placeholder="Enter date"
+               required #name="ngModel">
+        <br>
+        <input type="date" [(ngModel)]="dates.dates[1]"
+               class="form-control"
+               id="date2"
+               name="date2"
+               placeholder="Enter date"
+               required #name="ngModel">
+        <br>
+        <input type="date" [(ngModel)]="dates.dates[2]"
+               class="form-control"
+               id="date3"
+               name="date3"
+               placeholder="Enter date"
+               required #name="ngModel">
+        <br>
+        <input type="date" [(ngModel)]="dates.dates[3]"
+               class="form-control"
+               id="date4"
+               name="date4"
+               placeholder="Enter date"
+               required #name="ngModel">
+        <br>
+        <input type="date" [(ngModel)]="dates.dates[4]"
+               class="form-control"
+               id="date5"
+               name="date5"
+               placeholder="Enter date"
+               required #name="ngModel">
+        <br>
+        <input type="date" [(ngModel)]="dates.dates[5]"
+               class="form-control"
+               id="date6"
+               name="date7"
+               placeholder="Enter date"
+               required #name="ngModel">
+        <br>
+        <input type="date" [(ngModel)]="dates.dates[6]"
+               class="form-control"
+               id="date7"
+               name="date7"
+               placeholder="Enter date"
+               required #name="ngModel">
+        <br>
+      </div>
+      <div [hidden]="!dates.dates" class="alert alert-danger">All Dates are required</div>
+      <button type="submit" [disabled]="!datesForm.form.valid"
+              class="btn btn-info">Submit</button>
+    </form>
+  </div>
+</div>
